@@ -8,15 +8,12 @@ const parseData = () => {
 //hacer un post request y devolver success y mensaje
 const sendData = async () => {
   console.log("sending data...");
+  const success = getRandomSuccess();
 
-  return { success: getRandomSuccess(), message: getRandomMessage() };
-};
-
-///funcion test, eliminar cuando todo este ok
-const getRandomMessage = () => {
-  const messages = ["Todo enviado", "Ha ocurrido un error"];
-
-  return messages[Math.floor(Math.random() * messages.length)];
+  return {
+    success,
+    message: success ? "Todo enviado" : "Ha ocurrido un error",
+  };
 };
 
 ///funcion test, eliminar cuando todo este ok
