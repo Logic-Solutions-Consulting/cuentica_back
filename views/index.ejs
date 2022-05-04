@@ -15,12 +15,21 @@
   </head>
   <body>
     <div class="container my-5">
-      <form action="http://localhost:5000/factura/new" method="POST">
+      <form
+        action="http://localhost:5000/factura/new"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <div class="mb-3">
           <label for="formFile" class="form-label"
             >Default file input example</label
           >
-          <input class="form-control" type="file" id="formFile" />
+          <input
+            class="form-control"
+            type="file"
+            id="formFile"
+            name="example1"
+          />
         </div>
         <select
           class="form-select"
